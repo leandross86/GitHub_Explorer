@@ -76,7 +76,7 @@ const Repository: React.FC = () => {
         <ul>
           <li>
             <strong>{repository.stargazers_count}</strong>
-            <span>Starts</span>
+            <span>Stars</span>
           </li>
           <li>
             <strong>{repository.forks_count}</strong>
@@ -92,10 +92,15 @@ const Repository: React.FC = () => {
       
       <Issues>
         {issues.map( issue => (
-          <a key={issue.id} href={issue.html_url}>
+          // eslint-disable-next-line react/jsx-no-target-blank
+          <a 
+            key={issue.id}
+            href={issue.html_url}
+            target="_blank"
+          >
             <div>
               <strong>{issue.title}</strong>
-              <p>{issue.user}</p>
+              <p>{issue.user.login}</p>
             </div>
             <FiChevronRight size={40}/>
           </a>
