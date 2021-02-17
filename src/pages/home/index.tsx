@@ -1,6 +1,6 @@
 import React, { useState, FormEvent, useEffect } from 'react';
 import { FiChevronRight } from 'react-icons/fi'
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 import api from '../../services/api'
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
       {inputError && <Error>{inputError}</Error>}
       <Repositories>
         {repositories.map((repo, index) => (
-          <Link key={index} to="/repository">
+          <Link key={index} to={`repository/${repo.full_name}`}>
             <img 
               src={repo.owner.avatar_url}
               alt={repo.owner.login}
