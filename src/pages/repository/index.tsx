@@ -51,6 +51,27 @@ const Repository: React.FC = () => {
       }
     )
 
+
+    // async function loadData(): Promise<void>{
+    //   const repository = await api.get(`repos/${params.repository}`)
+    //   const issues = await api.get(`repos/${params.repository}/issues`)
+
+    //   console.log('repository', repository.data)
+    //   console.log('issues', issues.data)
+    // }
+    // loadData()
+
+    // async function loadData(): Promise<void> {
+    //   const [repository, issues ] = await Promise.all([
+    //     api.get(`repos/${params.repository}`),
+    //     api.get(`repos/${params.repository}/issues`)
+    //   ])
+
+    //   console.log('repository', repository.data)
+    //   console.log('issues', issues.data)
+    // }
+    // loadData()
+
   }, [params.repository])
 
   return (
